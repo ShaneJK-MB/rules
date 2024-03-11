@@ -1,0 +1,64 @@
+{
+  "rules_expressions": [
+    {
+      "RuleName": "MaxOutLisa",
+      "Expression": "sytd.ContainsKey(\"Lisa\") AND sytd[\"Lisa\"] > 3500"
+    },
+
+    {"RuleName": "MipNotCompleted",
+    "Expression": "is_mip_completed == false"
+    },
+
+    {"RuleName": "LisaNotMaxedOut",
+    "Expression": "active_products_list.Contains(\"LisaPlus\") AND not_maxedout_products_list.Contains(\"LisaPlus\")"
+    },
+
+    {"RuleName": "CashIsaNotOpened",
+    "Expression": "!active_products_list.Contains(\"CashIsa\")"
+    },
+
+    {"RuleName": "CashIsaNotOpened",
+    "Expression": "!active_products_list.Contains(\"CashIsa\")"
+    },
+
+    {
+      "RuleName": "NoSavingsAccountOpen",
+      "Expression": "!active_products_list.Contains(\"Savings95\") AND !active_products_list.Contains(\"Savings45\") AND !active_products_list.Contains(\"SavingsEA\") AND !active_products_list.Contains(\"SavingsEA2\") AND !active_products_list.Contains(\"Savings120\") AND !active_products_list.Contains(\"Savings32\")"
+    },
+
+    {
+      "RuleName": "SimpleSaverNotOpen",
+      "Expression": "!active_products_list.Contains(\"SavingsEA2\")"
+    },
+
+    {
+      "RuleName": "CashIsaNotMaxedout",
+      "Expression": "active_products_list.Contains(\"CashIsa\") AND not_maxedout_products_list.Contains(\"CashIsa\")"
+    },
+    {
+      "RuleName": "CashLisaNotMaxedout",
+      "Expression": "active_products_list.Contains(\"Lisa\") AND not_maxedout_products_list.Contains(\"Lisa\")"
+    },
+    {
+      "RuleName": "SimpleSaverPlanValueBetween",
+    "Expression": "plan_value.ContainsKey(\"SavingsEA\") AND plan_value[\"SavingsEA\"] > £50 AND plan_value[\"SavingsEA\"] < £200"
+    },
+    {
+      "RuleName": "SippNotMaxedout",
+      "Expression": "active_products_list.Contains(\"Sipp\") AND not_maxedout_products_list.Contains(\"Sipp\")"
+    },
+    {
+      "RuleName": "HasSSIsaorGIAorSSLisa",
+      "Expression": "active_products_list.Contains(\"Isa\") OR active_products_list.Contains(\"Gia\") OR active_products_list.Contains(\"LisaPlus\")"
+    },
+    {
+      "RuleName": "DoesNotHaveInvestingProduct",
+      "Expression": "!active_products_list.Contains(\"Isa\") OR active_products_list.Contains(\"Gia\") OR active_products_list.Contains(\"LisaPlus\")"
+    },
+    {
+      "RuleName": "SYTDAmount",
+      "Expression": "sytd.ContainsKey(\"CashIsa\") AND sytd[\"CashIsa\"] > 10000"
+    }
+  ]
+}
+  

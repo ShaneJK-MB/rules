@@ -1,0 +1,19 @@
+{
+    "rules_expressions": [
+      {
+        "RuleName": "GiveDiscount35NestedAndExample",
+        "Operator": "AndAlso",
+        "Rules": [
+      {
+        "RuleName": "IsLoyal",
+        "Expression": "lisa_bonus_left_to_claim > 600"
+      },
+      {
+        "RuleName": "AndHasTotalPurchased100000",
+        "Expression": "sytd.ContainsKey(\"Lisa\") AND sytd[\"Lisa\"] > 350"
+      }
+    ]
+      }
+      
+    ]
+  }
