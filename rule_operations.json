@@ -1,5 +1,5 @@
 {
-    "rules_expressions": [
+    "rules_expressions_edit": [
       {
         "RuleName": "GiveDiscount35NestedAndExample",
         "Operator": "AndAlso",
